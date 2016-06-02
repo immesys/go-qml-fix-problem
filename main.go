@@ -1,6 +1,10 @@
 package main
 
-import "gopkg.in/qml.v1"
+import (
+	"fmt"
+
+	"gopkg.in/qml.v1"
+)
 
 func main() {
 	err := qml.Run(run)
@@ -16,7 +20,7 @@ func (gs *GoStruct) ReturnGoType() *GoStruct {
 	return gs
 }
 func (gs *GoStruct) UseGoType(v *GoStruct) {
-
+	fmt.Println("Successfully called UseGoType()")
 }
 
 func run() error {
